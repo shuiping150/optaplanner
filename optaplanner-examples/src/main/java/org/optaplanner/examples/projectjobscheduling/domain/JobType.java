@@ -17,7 +17,13 @@
 package org.optaplanner.examples.projectjobscheduling.domain;
 
 public enum JobType {
+    /**
+     * 首工序
+     */
     SOURCE,
     STANDARD,
+    /**
+     * 末工序
+     */
     SINK;
 }

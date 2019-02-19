@@ -21,12 +21,24 @@ import java.util.List;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import org.optaplanner.examples.common.domain.AbstractPersistable;
 
+/**
+ * 资源组合方案
+ */
 @XStreamAlias("PjsExecutionMode")
 public class ExecutionMode extends AbstractPersistable {
 
+    /**
+     * 所属工序
+     */
     private Job job;
+    /**
+     * 方案计划天数
+     * */
     private int duration; // In days
 
+    /**
+     * 资源需求列表
+     */
     private List<ResourceRequirement> resourceRequirementList;
 
     public Job getJob() {

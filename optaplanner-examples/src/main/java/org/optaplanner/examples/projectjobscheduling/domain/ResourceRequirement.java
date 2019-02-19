@@ -20,11 +20,23 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 import org.optaplanner.examples.common.domain.AbstractPersistable;
 import org.optaplanner.examples.projectjobscheduling.domain.resource.Resource;
 
+/**
+ * 资源需求
+ */
 @XStreamAlias("PjsResourceRequirement")
 public class ResourceRequirement extends AbstractPersistable {
 
+    /**
+     * 所属资源组合解决方案
+     */
     private ExecutionMode executionMode;
+    /**
+     * 所需资源
+     */
     private Resource resource;
+    /**
+     * 所需要能力
+     */
     private int requirement;
 
     public ExecutionMode getExecutionMode() {

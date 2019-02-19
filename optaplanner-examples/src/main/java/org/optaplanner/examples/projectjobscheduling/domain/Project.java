@@ -22,13 +22,28 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 import org.optaplanner.examples.common.domain.AbstractPersistable;
 import org.optaplanner.examples.projectjobscheduling.domain.resource.LocalResource;
 
+/**
+ * 主计划
+ */
 @XStreamAlias("PjsProject")
 public class Project extends AbstractPersistable {
 
+    /**
+     * 出厂日期
+     */
     private int releaseDate;
+    /**
+     * 运输周期
+     */
     private int criticalPathDuration;
 
+    /**
+     * 计划内部资源列表
+     */
     private List<LocalResource> localResourceList;
+    /**
+     * 工序列表
+     */
     private List<Job> jobList;
 
     public int getReleaseDate() {
@@ -67,6 +82,9 @@ public class Project extends AbstractPersistable {
     // Complex methods
     // ************************************************************************
 
+    /**
+     * @return 到货日期
+     */
     public int getCriticalPathEndDate() {
         return releaseDate + criticalPathDuration;
     }

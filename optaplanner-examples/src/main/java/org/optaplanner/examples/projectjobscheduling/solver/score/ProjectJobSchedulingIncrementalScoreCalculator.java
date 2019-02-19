@@ -36,12 +36,30 @@ import org.optaplanner.examples.projectjobscheduling.solver.score.capacity.Resou
 
 public class ProjectJobSchedulingIncrementalScoreCalculator extends AbstractIncrementalScoreCalculator<Schedule> {
 
+    /**
+     * 资源跟踪
+     */
     private Map<Resource, ResourceCapacityTracker> resourceCapacityTrackerMap;
+    /**
+     * 主计划实际完成日期
+     */
     private Map<Project, Integer> projectEndDateMap;
+    /**
+     * 最大实际完成日期
+     */
     private int maximumProjectEndDate;
 
+    /**
+     * 硬分值= SUM(跟踪器的硬份值)
+     */
     private int hardScore;
+    /**
+     * 软分值0= -(实际完成日期 - 到货日期)
+     */
     private int soft0Score;
+    /**
+     * 软分值1= 所有计划最早出厂
+     */
     private int soft1Score;
 
 

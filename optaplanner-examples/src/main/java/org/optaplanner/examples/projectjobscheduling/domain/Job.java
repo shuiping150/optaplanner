@@ -21,13 +21,27 @@ import java.util.List;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import org.optaplanner.examples.common.domain.AbstractPersistable;
 
+/**
+ * 工序
+ */
 @XStreamAlias("PjsJob")
 public class Job extends AbstractPersistable {
 
+    /**
+     * 所属主计划
+     */
     private Project project;
+    /**
+     * 工序类型
+     */
     private JobType jobType;
+    /**
+     * 资源组合方案列表
+     */
     private List<ExecutionMode> executionModeList;
-
+    /**
+     * 后工序
+     */
     private List<Job> successorJobList;
 
     public Project getProject() {

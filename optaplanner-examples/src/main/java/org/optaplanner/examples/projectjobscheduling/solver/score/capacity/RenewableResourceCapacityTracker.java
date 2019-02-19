@@ -25,9 +25,18 @@ import org.optaplanner.examples.projectjobscheduling.domain.resource.Resource;
 
 public class RenewableResourceCapacityTracker extends ResourceCapacityTracker {
 
+    /**
+     * 每天产能
+     */
     protected int capacityEveryDay;
 
+    /**
+     * 每天占用
+     */
     protected Map<Integer, Integer> usedPerDay;
+    /**
+     * 硬分值
+     */
     protected int hardScore;
 
     public RenewableResourceCapacityTracker(Resource resource) {

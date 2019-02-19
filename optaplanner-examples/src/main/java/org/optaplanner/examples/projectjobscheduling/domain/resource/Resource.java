@@ -20,6 +20,9 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamInclude;
 import org.optaplanner.examples.common.domain.AbstractPersistable;
 
+/**
+ * 资源类
+ */
 @XStreamAlias("PjsResource")
 @XStreamInclude({
         GlobalResource.class,
@@ -27,6 +30,9 @@ import org.optaplanner.examples.common.domain.AbstractPersistable;
 })
 public abstract class Resource extends AbstractPersistable {
 
+    /**
+     * 资源承受能力
+     */
     private int capacity;
 
     public int getCapacity() {
@@ -41,6 +47,9 @@ public abstract class Resource extends AbstractPersistable {
     // Complex methods
     // ************************************************************************
 
+    /**
+     * @return 是否可再生(重复利用)
+     */
     public abstract boolean isRenewable();
 
 }

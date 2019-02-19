@@ -22,7 +22,13 @@ import org.optaplanner.examples.projectjobscheduling.domain.resource.Resource;
 
 public class NonrenewableResourceCapacityTracker extends ResourceCapacityTracker {
 
+    /**
+     * 资源承受能力
+     */
     protected int capacity;
+    /**
+     * 已使用
+     */
     protected int used;
 
     public NonrenewableResourceCapacityTracker(Resource resource) {

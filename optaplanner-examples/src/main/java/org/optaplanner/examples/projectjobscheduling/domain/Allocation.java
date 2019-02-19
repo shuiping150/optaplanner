@@ -32,22 +32,49 @@ import org.optaplanner.examples.projectjobscheduling.domain.solver.ExecutionMode
 import org.optaplanner.examples.projectjobscheduling.domain.solver.NotSourceOrSinkAllocationFilter;
 import org.optaplanner.examples.projectjobscheduling.domain.solver.PredecessorsDoneDateUpdatingVariableListener;
 
+/**
+ * 排程结果
+ */
 @PlanningEntity(movableEntitySelectionFilter = NotSourceOrSinkAllocationFilter.class)
 @XStreamAlias("PjsAllocation")
 public class Allocation extends AbstractPersistable {
 
+    /**
+     * 工序
+     */
     private Job job;
 
+    /**
+     * 首工序排程
+     */
     private Allocation sourceAllocation;
+    /**
+     * 末工序排程
+     */
     private Allocation sinkAllocation;
+    /**
+     * 前工序排程
+     */
     private List<Allocation> predecessorAllocationList;
+    /**
+     * 后工序排程
+     */
     private List<Allocation> successorAllocationList;
 
     // Planning variables: changes during planning, between score calculations.
+    /**
+     * 选择资源组合方案
+     */
     private ExecutionMode executionMode;
+    /**
+     * 延迟开始天数
+     */
     private Integer delay; // In days
 
     // Shadow variables
+    /**
+     * 前工序完成日期
+     */
     private Integer predecessorsDoneDate;
 
     public Job getJob() {
