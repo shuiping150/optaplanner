@@ -26,20 +26,20 @@ import org.optaplanner.core.api.domain.solution.PlanningSolution;
 import org.optaplanner.core.api.domain.solution.drools.ProblemFactCollectionProperty;
 import org.optaplanner.core.api.score.buildin.bendable.BendableScore;
 import org.optaplanner.examples.common.domain.AbstractPersistable;
-import org.optaplanner.examples.projectjobscheduling.domain.Allocation;
-import org.optaplanner.examples.projectjobscheduling.domain.ExecutionMode;
-import org.optaplanner.examples.projectjobscheduling.domain.Job;
-import org.optaplanner.examples.projectjobscheduling.domain.Project;
-import org.optaplanner.examples.projectjobscheduling.domain.ResourceRequirement;
-import org.optaplanner.examples.projectjobscheduling.domain.resource.Resource;
+import org.optaplanner.examples.aps.domain.Allocation;
+import org.optaplanner.examples.aps.domain.ExecutionMode;
+import org.optaplanner.examples.aps.domain.Job;
+import org.optaplanner.examples.aps.domain.Project;
+import org.optaplanner.examples.aps.domain.ResourceRequirement;
+import org.optaplanner.examples.aps.domain.resource.Resource;
 import org.optaplanner.persistence.xstream.api.score.buildin.bendable.BendableScoreXStreamConverter;
 
 @PlanningSolution
 @XStreamAlias("PjsSchedule")
 public class Schedule extends AbstractPersistable {
 
-    private List<org.optaplanner.examples.projectjobscheduling.domain.Project> projectList;
-    private List<org.optaplanner.examples.projectjobscheduling.domain.Job> jobList;
+    private List<Project> projectList;
+    private List<Job> jobList;
     private List<ExecutionMode> executionModeList;
     private List<Resource> resourceList;
     private List<ResourceRequirement> resourceRequirementList;
@@ -50,7 +50,7 @@ public class Schedule extends AbstractPersistable {
     private BendableScore score;
 
     @ProblemFactCollectionProperty
-    public List<org.optaplanner.examples.projectjobscheduling.domain.Project> getProjectList() {
+    public List<Project> getProjectList() {
         return projectList;
     }
 
@@ -59,7 +59,7 @@ public class Schedule extends AbstractPersistable {
     }
 
     @ProblemFactCollectionProperty
-    public List<org.optaplanner.examples.projectjobscheduling.domain.Job> getJobList() {
+    public List<Job> getJobList() {
         return jobList;
     }
 

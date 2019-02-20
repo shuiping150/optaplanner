@@ -27,14 +27,14 @@ import org.optaplanner.core.api.domain.variable.CustomShadowVariable;
 import org.optaplanner.core.api.domain.variable.PlanningVariable;
 import org.optaplanner.core.api.domain.variable.PlanningVariableReference;
 import org.optaplanner.examples.common.domain.AbstractPersistable;
-import org.optaplanner.examples.projectjobscheduling.domain.ExecutionMode;
-import org.optaplanner.examples.projectjobscheduling.domain.Job;
-import org.optaplanner.examples.projectjobscheduling.domain.JobType;
-import org.optaplanner.examples.projectjobscheduling.domain.Project;
-import org.optaplanner.examples.projectjobscheduling.domain.solver.DelayStrengthComparator;
-import org.optaplanner.examples.projectjobscheduling.domain.solver.ExecutionModeStrengthWeightFactory;
-import org.optaplanner.examples.projectjobscheduling.domain.solver.NotSourceOrSinkAllocationFilter;
-import org.optaplanner.examples.projectjobscheduling.domain.solver.PredecessorsDoneDateUpdatingVariableListener;
+import org.optaplanner.examples.aps.domain.ExecutionMode;
+import org.optaplanner.examples.aps.domain.Job;
+import org.optaplanner.examples.aps.domain.JobType;
+import org.optaplanner.examples.aps.domain.Project;
+import org.optaplanner.examples.aps.domain.solver.DelayStrengthComparator;
+import org.optaplanner.examples.aps.domain.solver.ExecutionModeStrengthWeightFactory;
+import org.optaplanner.examples.aps.domain.solver.NotSourceOrSinkAllocationFilter;
+import org.optaplanner.examples.aps.domain.solver.PredecessorsDoneDateUpdatingVariableListener;
 
 /**
  * 排程结果
@@ -46,7 +46,7 @@ public class Allocation extends AbstractPersistable {
     /**
      * 工序
      */
-    private org.optaplanner.examples.projectjobscheduling.domain.Job job;
+    private Job job;
 
     /**
      * 首工序排程
@@ -81,7 +81,7 @@ public class Allocation extends AbstractPersistable {
      */
     private Integer predecessorsDoneDate;
 
-    public org.optaplanner.examples.projectjobscheduling.domain.Job getJob() {
+    public Job getJob() {
         return job;
     }
 

@@ -20,8 +20,8 @@ import java.util.List;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import org.optaplanner.examples.common.domain.AbstractPersistable;
-import org.optaplanner.examples.projectjobscheduling.domain.Job;
-import org.optaplanner.examples.projectjobscheduling.domain.resource.LocalResource;
+import org.optaplanner.examples.aps.domain.Job;
+import org.optaplanner.examples.aps.domain.resource.LocalResource;
 
 /**
  * 主计划
@@ -45,7 +45,7 @@ public class Project extends AbstractPersistable {
     /**
      * 工序列表
      */
-    private List<org.optaplanner.examples.projectjobscheduling.domain.Job> jobList;
+    private List<Job> jobList;
 
     public int getReleaseDate() {
         return releaseDate;
@@ -71,7 +71,7 @@ public class Project extends AbstractPersistable {
         this.localResourceList = localResourceList;
     }
 
-    public List<org.optaplanner.examples.projectjobscheduling.domain.Job> getJobList() {
+    public List<Job> getJobList() {
         return jobList;
     }
 

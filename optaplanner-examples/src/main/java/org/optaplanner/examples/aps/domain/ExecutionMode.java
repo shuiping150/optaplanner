@@ -20,8 +20,8 @@ import java.util.List;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import org.optaplanner.examples.common.domain.AbstractPersistable;
-import org.optaplanner.examples.projectjobscheduling.domain.Job;
-import org.optaplanner.examples.projectjobscheduling.domain.ResourceRequirement;
+import org.optaplanner.examples.aps.domain.Job;
+import org.optaplanner.examples.aps.domain.ResourceRequirement;
 
 /**
  * 资源组合方案
@@ -32,7 +32,7 @@ public class ExecutionMode extends AbstractPersistable {
     /**
      * 所属工序
      */
-    private org.optaplanner.examples.projectjobscheduling.domain.Job job;
+    private Job job;
     /**
      * 方案计划天数
      * */
@@ -43,7 +43,7 @@ public class ExecutionMode extends AbstractPersistable {
      */
     private List<ResourceRequirement> resourceRequirementList;
 
-    public org.optaplanner.examples.projectjobscheduling.domain.Job getJob() {
+    public Job getJob() {
         return job;
     }
 

@@ -18,8 +18,8 @@ package org.optaplanner.examples.aps.domain;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import org.optaplanner.examples.common.domain.AbstractPersistable;
-import org.optaplanner.examples.projectjobscheduling.domain.ExecutionMode;
-import org.optaplanner.examples.projectjobscheduling.domain.resource.Resource;
+import org.optaplanner.examples.aps.domain.ExecutionMode;
+import org.optaplanner.examples.aps.domain.resource.Resource;
 
 /**
  * 资源需求
@@ -30,7 +30,7 @@ public class ResourceRequirement extends AbstractPersistable {
     /**
      * 所属资源组合解决方案
      */
-    private org.optaplanner.examples.projectjobscheduling.domain.ExecutionMode executionMode;
+    private org.optaplanner.examples.aps.domain.ExecutionMode executionMode;
     /**
      * 所需资源
      */
@@ -40,7 +40,7 @@ public class ResourceRequirement extends AbstractPersistable {
      */
     private int requirement;
 
-    public org.optaplanner.examples.projectjobscheduling.domain.ExecutionMode getExecutionMode() {
+    public org.optaplanner.examples.aps.domain.ExecutionMode getExecutionMode() {
         return executionMode;
     }
 

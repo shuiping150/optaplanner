@@ -20,7 +20,7 @@ import java.io.Serializable;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
-import org.optaplanner.examples.projectjobscheduling.domain.resource.Resource;
+import org.optaplanner.examples.aps.domain.resource.Resource;
 
 public class RenewableResourceUsedDay implements Serializable {
 

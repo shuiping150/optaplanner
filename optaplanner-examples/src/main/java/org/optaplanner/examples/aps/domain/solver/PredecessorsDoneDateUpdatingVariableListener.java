@@ -22,7 +22,7 @@ import java.util.Queue;
 
 import org.optaplanner.core.impl.domain.variable.listener.VariableListener;
 import org.optaplanner.core.impl.score.director.ScoreDirector;
-import org.optaplanner.examples.projectjobscheduling.domain.Allocation;
+import org.optaplanner.examples.aps.domain.Allocation;
 
 public class PredecessorsDoneDateUpdatingVariableListener implements VariableListener<Allocation> {
 

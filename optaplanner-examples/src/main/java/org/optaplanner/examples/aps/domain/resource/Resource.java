@@ -19,8 +19,8 @@ package org.optaplanner.examples.aps.domain.resource;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamInclude;
 import org.optaplanner.examples.common.domain.AbstractPersistable;
-import org.optaplanner.examples.projectjobscheduling.domain.resource.GlobalResource;
-import org.optaplanner.examples.projectjobscheduling.domain.resource.LocalResource;
+import org.optaplanner.examples.aps.domain.resource.GlobalResource;
+import org.optaplanner.examples.aps.domain.resource.LocalResource;
 
 /**
  * 资源类

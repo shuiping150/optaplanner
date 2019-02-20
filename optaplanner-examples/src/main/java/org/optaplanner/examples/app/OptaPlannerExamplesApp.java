@@ -39,6 +39,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
+import org.optaplanner.examples.aps.app.APSApp;
 import org.optaplanner.examples.cheaptime.app.CheapTimeApp;
 import org.optaplanner.examples.cloudbalancing.app.CloudBalancingApp;
 import org.optaplanner.examples.coachshuttlegathering.app.CoachShuttleGatheringApp;
@@ -146,6 +147,7 @@ public class OptaPlannerExamplesApp extends JFrame {
 
         panel.add(createExampleButton(new TennisApp()));
         panel.add(createExampleButton(new FlightCrewSchedulingApp()));
+        panel.add(createExampleButton(new APSApp()));
 
         return panel;
     }

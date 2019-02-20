@@ -20,9 +20,9 @@ import java.util.List;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import org.optaplanner.examples.common.domain.AbstractPersistable;
-import org.optaplanner.examples.projectjobscheduling.domain.ExecutionMode;
-import org.optaplanner.examples.projectjobscheduling.domain.JobType;
-import org.optaplanner.examples.projectjobscheduling.domain.Project;
+import org.optaplanner.examples.aps.domain.ExecutionMode;
+import org.optaplanner.examples.aps.domain.JobType;
+import org.optaplanner.examples.aps.domain.Project;
 
 /**
  * 工序

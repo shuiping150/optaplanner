@@ -34,32 +34,32 @@ import java.util.Set;
 
 import org.optaplanner.examples.common.persistence.AbstractTxtSolutionImporter;
 import org.optaplanner.examples.common.persistence.SolutionConverter;
-import org.optaplanner.examples.projectjobscheduling.app.ProjectJobSchedulingApp;
-import org.optaplanner.examples.projectjobscheduling.domain.Allocation;
-import org.optaplanner.examples.projectjobscheduling.domain.ExecutionMode;
-import org.optaplanner.examples.projectjobscheduling.domain.Job;
-import org.optaplanner.examples.projectjobscheduling.domain.JobType;
-import org.optaplanner.examples.projectjobscheduling.domain.Project;
-import org.optaplanner.examples.projectjobscheduling.domain.ResourceRequirement;
-import org.optaplanner.examples.projectjobscheduling.domain.Schedule;
-import org.optaplanner.examples.projectjobscheduling.domain.resource.GlobalResource;
-import org.optaplanner.examples.projectjobscheduling.domain.resource.LocalResource;
-import org.optaplanner.examples.projectjobscheduling.domain.resource.Resource;
+import org.optaplanner.examples.aps.app.APSApp;
+import org.optaplanner.examples.aps.domain.Allocation;
+import org.optaplanner.examples.aps.domain.ExecutionMode;
+import org.optaplanner.examples.aps.domain.Job;
+import org.optaplanner.examples.aps.domain.JobType;
+import org.optaplanner.examples.aps.domain.Project;
+import org.optaplanner.examples.aps.domain.ResourceRequirement;
+import org.optaplanner.examples.aps.domain.Schedule;
+import org.optaplanner.examples.aps.domain.resource.GlobalResource;
+import org.optaplanner.examples.aps.domain.resource.LocalResource;
+import org.optaplanner.examples.aps.domain.resource.Resource;
 
-public class ProjectJobSchedulingImporter extends AbstractTxtSolutionImporter<Schedule> {
+public class APSImporter extends AbstractTxtSolutionImporter<Schedule> {
 
     public static void main(String[] args) {
         SolutionConverter<Schedule> converter = SolutionConverter.createImportConverter(
-                ProjectJobSchedulingApp.DATA_DIR_NAME, new ProjectJobSchedulingImporter(), Schedule.class);
+                APSApp.DATA_DIR_NAME, new APSImporter(), Schedule.class);
         converter.convertAll();
     }
 
     @Override
     public TxtInputBuilder<Schedule> createTxtInputBuilder() {
-        return new ProjectJobSchedulingInputBuilder();
+        return new APSInputBuilder();
     }
 
-    public static class ProjectJobSchedulingInputBuilder extends TxtInputBuilder<Schedule> {
+    public static class APSInputBuilder extends TxtInputBuilder<Schedule> {
 
         private Schedule schedule;
 

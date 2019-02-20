@@ -31,15 +31,15 @@ import org.jfree.chart.renderer.xy.YIntervalRenderer;
 import org.jfree.data.xy.YIntervalSeries;
 import org.jfree.data.xy.YIntervalSeriesCollection;
 import org.optaplanner.examples.common.swingui.SolutionPanel;
-import org.optaplanner.examples.projectjobscheduling.domain.Allocation;
-import org.optaplanner.examples.projectjobscheduling.domain.Project;
-import org.optaplanner.examples.projectjobscheduling.domain.Schedule;
+import org.optaplanner.examples.aps.domain.Allocation;
+import org.optaplanner.examples.aps.domain.Project;
+import org.optaplanner.examples.aps.domain.Schedule;
 
-public class ProjectJobSchedulingPanel extends SolutionPanel<Schedule> {
+public class APSPanel extends SolutionPanel<Schedule> {
 
-    public static final String LOGO_PATH = "/org/optaplanner/examples/projectjobscheduling/swingui/projectJobSchedulingLogo.png";
+    public static final String LOGO_PATH = "/org/optaplanner/examples/aps/swingui/APSLogo.png";
 
-    public ProjectJobSchedulingPanel() {
+    public APSPanel() {
         setLayout(new BorderLayout());
     }
 

@@ -18,9 +18,9 @@ package org.optaplanner.examples.aps.domain.solver;
 
 import org.optaplanner.core.impl.heuristic.selector.common.decorator.SelectionFilter;
 import org.optaplanner.core.impl.score.director.ScoreDirector;
-import org.optaplanner.examples.projectjobscheduling.domain.Allocation;
-import org.optaplanner.examples.projectjobscheduling.domain.JobType;
-import org.optaplanner.examples.projectjobscheduling.domain.Schedule;
+import org.optaplanner.examples.aps.domain.Allocation;
+import org.optaplanner.examples.aps.domain.JobType;
+import org.optaplanner.examples.aps.domain.Schedule;
 
 public class NotSourceOrSinkAllocationFilter implements SelectionFilter<Schedule, Allocation> {
 
